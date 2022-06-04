@@ -22,8 +22,8 @@ function App() {
     },[searchSubject,searchNumber])
 
     const retriveCourse = () => {
-        //CourseDataService.getCourseBySubjectAndNumber(searchSubject,searchNumber)
-        CourseDataService.getAllCourses()
+        CourseDataService.getCourseBySubjectAndNumber(searchSubject,searchNumber)
+        //CourseDataService.getAllCourses()
         .then(response =>{
             data = response.data
             console.log(response.data)
