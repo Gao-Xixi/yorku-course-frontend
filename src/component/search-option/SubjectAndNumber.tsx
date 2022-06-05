@@ -1,36 +1,10 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import CourseDataService from '../service/Service'
+
 import 'antd/dist/antd.css';
 import { Form, Input, Button } from 'antd';
 
-const CoursesList = ({ searchSubject, searchNumber, onChangeSearchSubject,onChangeSearchNumber, retriveCourse}: any) => {
-    // const [courses, setCourses] = useState([])
-    // const [searchSubject, setSearchSubject] = useState("")
-    // const [searchNumber, setSearchNumber] = useState("")
-    // useEffect(()=>{
-    //     retriveCourse()
-    // },[searchSubject,searchNumber])
-
-    // const retriveCourse = () => {
-    //     CourseDataService.getCourseBySubjectAndNumber(searchSubject,searchNumber)
-    //     .then(response =>{
-    //         console.log(response.data)
-    //         setCourses(response.data)
-    //     })
-    //     .catch(e =>{
-    //         console.log(e)
-    //     })
-    // }
-
-    // const onChangeSearchSubject = (e :React.ChangeEvent<HTMLInputElement>) =>{
-    //     setSearchSubject(e.target.value)
-    // }
-    // const onChangeSearchNumber = (e :React.ChangeEvent<HTMLInputElement>) =>{
-    //     setSearchNumber(e.target.value)
-    // }
+const SubjectAndNumber = ({ searchSubject, searchNumber, onChangeSearchSubject,onChangeSearchNumber, retriveCourse}: any) => {
   return (
-        
+   
     <Form
         name="wrap"
         labelCol={{
@@ -85,6 +59,6 @@ const CoursesList = ({ searchSubject, searchNumber, onChangeSearchSubject,onChan
 );
 };
 
-export default CoursesList
+export default SubjectAndNumber
 
 // onClick={findBySubjectAndNumber}

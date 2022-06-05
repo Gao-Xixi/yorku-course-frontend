@@ -1,0 +1,75 @@
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
+const options = [
+  'All Courses',
+  'Subject Number',
+  'Subject',
+  'Credit',
+  'Title',
+  'Subject Credit',
+  'Subject Year',
+  'Subject Title',
+  'Subject Year Title'
+];
+
+const ITEM_HEIGHT = 48;
+
+export default function MenuBar({setSearchId}:any) {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleOptionClick = (option:String) =>{
+    setSearchId(option)
+    console.log(option)
+  }
+ 
+
+  return (
+    <div>
+      <IconButton
+        aria-label="more"
+        id="long-button"
+        aria-controls={open ? 'long-menu' : undefined}
+        aria-expanded={open ? 'true' : undefined}
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        <MenuIcon color="inherit"/>
+      </IconButton>
+      <Menu
+        id="long-menu"
+        MenuListProps={{
+          'aria-labelledby': 'long-button',
+        }}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        PaperProps={{
+          style: {
+            maxHeight: ITEM_HEIGHT * 4.5,
+            width: '20ch',
+          },
+        }}
+      >
+        {options.map((option) => (
+          <MenuItem 
+          id={option} 
+          onClick={()=>{
+            setSearchId(option)
+            console.log(option)
+          }}>
+            {option}
+          </MenuItem>
+        ))}
+      </Menu>
+    </div>
+  );
+}
