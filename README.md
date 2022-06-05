@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This Projejct is deployed to AWS S3 <Link> 
+  http://yorku-course-frontend-app.s3-website-us-east-1.amazonaws.com
+
 
 ## Available Scripts
 
