@@ -1,7 +1,15 @@
-# Getting Started with Create React App
+# YorkU Course App
+  ### :heart_decoration: Have 9 searching option to looking for the course(s).
+  ### :heart_decoration: For example: Subject, Course Number, Title, Credit, Which Year Course and their combinations.
+  ### :heart_decoration: The result of courses will shown on table.
 
-## This Projejct is deployed to AWS S3 <Link> 
-  http://yorku-course-frontend-app.s3-website-us-east-1.amazonaws.com
+## This Project is deployed to AWS S3 <Link> 
+  - http://yorku-course-frontend-app.s3-website-us-east-1.amazonaws.com
+  - Click the menu icon on the top-right corner
+  - Select the search option
+  - File the input box and click search
+  - Get the courses
+  
 
 
 ## Available Scripts
